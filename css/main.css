@@ -1,0 +1,204 @@
+/*
+Challenge by Frontend Mentor. 
+Coded by @Codederk.
+*/
+:root {
+  --color-primary: hsl(225, 100%, 94%);
+  --color-secondary: hsl(245, 75%, 52%);
+  --color-background: hsl(225, 100%, 94%);
+  --color-surface: white;
+  --color-dark: hsl(223, 47%, 23%);
+  --color-light: hsl(225, 100%, 98%);
+  --color-base: hsl(224, 23%, 55%);
+  --body-font-family: Red Hat Display, sans-serif;
+  --body-font-size: 1rem;
+  --body-font-weight: 500;
+  --body-line-height: 1.5;
+  --body-bg-color: hsl(225, 100%, 94%);
+  --body-color: hsl(224, 23%, 55%);
+  --button-box-shadow: 0 1px 15px hsla(245, 75%, 52%, 0.5);
+  --card-box-shadow: 0 20px 30px hsla(224, 23%, 55%, 0.5);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
+  background-color: var(--color-background);
+  color: var(--body-color);
+}
+
+main {
+  display: block;
+}
+
+h1,
+h2 {
+  margin: 0;
+  color: var(--color-dark);
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  background-color: transparent;
+}
+
+small,
+.small {
+  font-size: 0.875rem;
+}
+
+body {
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 576px;
+  background-position: center top;
+  display: flex;
+  min-height: 100vh;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-size: 1440px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-size: contain;
+  }
+}
+.card {
+  background-color: white;
+  width: 330px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--card-box-shadow);
+}
+
+.card-img {
+  max-width: 100%;
+}
+
+.card-body {
+  padding: 1.5rem 1.625rem 1.875rem;
+  text-align: center;
+}
+.card-body h1 {
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+}
+.card-body p {
+  line-height: 1.5625rem;
+  margin-bottom: 1.5rem;
+}
+
+.panel {
+  background-color: var(--color-light);
+  border-radius: 0.75rem;
+  padding: 0.825rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.panel .panel-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.panel .panel-price .price {
+  display: flex;
+  flex-direction: column;
+}
+.panel .panel-price .price p {
+  margin-bottom: 0;
+}
+.panel a {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.action-button {
+  width: 100%;
+  background-color: var(--color-secondary);
+  border: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.825rem;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  box-shadow: var(--button-box-shadow);
+  transition: background-color 0.3s ease;
+}
+.action-button:hover {
+  background-color: #6255e7;
+}
+
+a.cancel-order {
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--color-base);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a.cancel-order:hover {
+  color: var(--color-dark);
+}
+
+@media screen and (min-width: 576px) {
+  .card {
+    width: 450px;
+  }
+  .card-body {
+    padding: 2rem 2rem;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
+  p {
+    font-size: 17px;
+  }
+  .panel {
+    padding: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  .panel .panel-price .price h2 {
+    font-size: 1rem;
+  }
+  .panel .panel-price .price p {
+    font-size: 1rem;
+  }
+  .action-button {
+    margin-bottom: 2rem;
+  }
+}

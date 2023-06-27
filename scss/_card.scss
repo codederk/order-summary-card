@@ -1,0 +1,120 @@
+.card {
+  background-color: white;
+  width: 330px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--card-box-shadow);
+}
+
+.card-img {
+  max-width: 100%;
+}
+
+.card-body {
+  padding: 1.5rem 1.625rem 1.875rem;
+  text-align: center;
+  h1 {
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    line-height: 1.5625rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.panel {
+  background-color: var(--color-light);
+  border-radius: 0.75rem;
+  padding: 0.825rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  .panel-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    .price {
+      display: flex;
+      flex-direction: column;
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+  a {
+    text-decoration: underline;
+    font-weight: 700;
+  }
+}
+
+.action-button {
+  width: 100%;
+  background-color: var(--color-secondary);
+  border: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.825rem;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  box-shadow: var(--button-box-shadow);
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: lighten($color-bright-blue, 10%);
+  }
+}
+
+a.cancel-order {
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--color-base);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  &:hover {
+    color: var(--color-dark);
+  }
+}
+
+// // Tablet and Desktop Version
+@media screen and (min-width: 576px) {
+  .card {
+    width: 450px;
+  }
+
+  .card-body {
+    padding: 2rem 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
+  p {
+    font-size: 17px;
+  }
+
+  .panel {
+    padding: 1.75rem;
+    margin-bottom: 2rem;
+    .panel-price {
+      .price {
+        h2 {
+          font-size: 1rem;
+        }
+        p {
+          font-size: $body-font-size;
+        }
+      }
+    }
+  }
+
+  .action-button {
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,33 @@
+// Color Variables
+$color-pale-blue: hsla(225, 100%, 94%); //Pale blue
+$color-bright-blue: hsl(245, 75%, 52%); // Bright blue
+$color-bright-blue-alpha: hsla(245, 75%, 52%, 0.5); // Bright blue alpha
+$color-dark-blue: hsl(223, 47%, 23%); // Dark blue
+$color-very-pale-blue: hsl(225, 100%, 98%); // Very pale blue
+$color-desaturated-blue: hsl(224, 23%, 55%); // Desaturated blue
+$color-white: white;
+
+// Color-map
+$colors: (
+  "primary": $color-pale-blue,
+  "secondary": $color-bright-blue,
+  "background": $color-pale-blue,
+  "surface": $color-white,
+  "dark": $color-dark-blue,
+  "light": $color-very-pale-blue,
+  "base": $color-desaturated-blue,
+);
+
+// Body
+$body-font-family: "Red Hat Display", sans-serif;
+$body-font-size: 1rem;
+$body-font-weight: 500;
+$body-line-height: 1.5;
+$body-bg-color: $color-pale-blue;
+$body-color: $color-desaturated-blue;
+
+// Text
+$font-small: 0.875rem;
+
+$box-shadow: 0 1px 15px $color-bright-blue-alpha;
+$card-box-shadow: 0 20px 30px hsla(224, 23%, 55%, 0.5);

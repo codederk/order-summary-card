@@ -1,0 +1,17 @@
+:root {
+  // Colors
+  @each $color, $value in $colors {
+    --color-#{$color}: #{$value};
+  }
+
+  // Body
+  --body-font-family: #{$body-font-family};
+  --body-font-size: #{$body-font-size};
+  --body-font-weight: #{$body-font-weight};
+  --body-line-height: #{$body-line-height};
+  --body-bg-color: #{$body-bg-color};
+  --body-color: #{$body-color};
+
+  --button-box-shadow: #{$box-shadow};
+  --card-box-shadow: #{$card-box-shadow};
+}
